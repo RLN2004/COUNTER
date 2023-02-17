@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>COUNTER APP</title>
+	
+	<style>
+		body{
+			background-color: greenyellow;
+		}
+
+		.container{
+			display: flex;
+			margin-top: 299px;
+			justify-content: center;
+		}
+
+		#container-2{
+			display: flex;
+			margin-top: 25px;
+			justify-content: center;
+		}
+
+		#btn{
+			padding-left: 35px;
+			padding-right: 35px;
+			font-size: 49px;
+			border-style: none;
+			border-radius: 15px;
+			background-color: darkgreen;
+			color: white;
+		}
+
+		#num{
+			font-size: 49px;
+			padding-right: 35px;
+			padding-left: 35px;
+		}
+
+	</style>
+
+</head>
+<body>
+
+<div class="container">
+	<button id="btn" onclick="minus()">-</button>
+	<p id="num">0</p>
+	<button id="btn" onclick="plus()">+</button>
+</div>
+
+<div id="container-2"><button id="btn" onclick="reset()">RESET</button></div>
+
+<script>
+	function plus() {
+		let num = document.getElementById('num').innerHTML;
+		num = Number(num);
+		let res = num + 1;
+		document.getElementById('num').innerHTML = res;
+	}
+	
+	function minus() {
+		let num = document.getElementById('num').innerHTML;
+		num = Number(num);
+		let res = num - 1;
+		document.getElementById('num').innerHTML = res;
+	}
+
+	function reset() {
+		let num = document.getElementById('num').innerHTML;
+		num = Number(num);
+		document.getElementById('num').innerHTML = 0;
+	}
+</script>
+
+</body>
+</html>
